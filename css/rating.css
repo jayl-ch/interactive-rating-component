@@ -1,0 +1,62 @@
+.logo img {
+  padding: 1rem;
+  background-color: var(--Grey-800);
+  border-radius: 50%;
+}
+
+.text-title {
+  color: var(--White);
+}
+
+.rating-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rating-options .submit {
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--Orange-500);
+  cursor: pointer;
+}
+
+.rating-options .submit:active {
+  background-color: var(--White);
+}
+
+.rating-option-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-option-wrapper [type="button"] {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 3rem;
+  border: none;
+  background-color: var(--Grey-800);
+  color: var(--Grey-500);
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.rating-option-wrapper [type="button"]:hover {
+  background-color: var(--Orange-500);
+  color: var(--Grey-800);
+}
+
+.rating-option-wrapper [type="button"].active {
+  background-color: var(--White);
+  color: var(--Grey-800);
+}
+
+.rating-option-wrapper [type="button"].error {
+  border: 2px solid orangered;
+}

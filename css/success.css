@@ -1,0 +1,23 @@
+.icon,
+.selected-rate {
+  display: flex;
+  justify-content: center;
+}
+
+.selected-rate p {
+  display: inline;
+  color: var(--Orange-500);
+  background-color: var(--Grey-800);
+  border-radius: 100px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.success-text {
+  text-align: center;
+}
+
+.success-text h2 {
+  margin-block-start: 0;
+  color: var(--White);
+}
