@@ -22,7 +22,7 @@ export function initInput(form, options) {
       setRate(options);
       removeActive(options);
       removeError(options);
-      window.location.href = "./success-message.html";
+      window.location.href = "success-message.html";
     }
   });
 }
