@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  user-select: none;
 }
 
 .rating-options .submit {
@@ -50,8 +51,10 @@ legend {
   border: 0 !important;
 }
 
-input[type=radio] {
-  display: none;
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .rating-options label {
@@ -64,7 +67,7 @@ input[type=radio] {
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: outline .2s ease;
+  transition: outline 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,11 +78,15 @@ input[type=radio] {
   color: var(--Grey-800);
 }
 
-.rating-options label:has(.active) {
+.rating-options [type="radio"]:focus-visible + label {
+  outline: 2px solid var(--Orange-500);
+}
+
+.rating-options .active + label {
   background-color: var(--White);
   color: var(--Grey-800);
 }
 
-.rating-options label:has(.error) {
+.rating-options .error + label {
   outline: 2px solid orangered;
 }
